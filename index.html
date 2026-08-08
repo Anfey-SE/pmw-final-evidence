@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amna Hafeez — PMW Internship Evidence</title>
+<meta name="description" content="Final portfolio and certificate evidence for the PreserveMy.World × TechRealm internship, Platform & Web Engineering track.">
+<meta property="og:title" content="Amna Hafeez — PMW Internship Evidence">
+<meta property="og:description" content="Verified evidence from a conservation-tech internship: heritage sites, ML, and 3D reconstruction.">
+<meta name="theme-color" content="#0A0F0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07161c;
+    --bg2: #0a1c23;
+    --panel: #111c18;
+    --border: rgba(237,234,226,0.09);
+    --border-hover: rgba(77,255,180,0.35);
+    --accent: #4DFFB4;
+    --accent-dim: rgba(77,255,180,0.14);
+    --text: #EDEAE2;
+    --text-soft: #93a39a;
+    --cream: #F2EDE3;
+    --cream-ink: #17231C;
+    --cream-soft: #5a6b5e;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: 'Inter', sans-serif; line-height: 1.55; overflow-x: hidden;
+  }
+  .disp { font-family: 'Space Grotesk', sans-serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  a { color: var(--accent); }
+  .frame { max-width: 1180px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ---------- HERO ---------- */
+  .hero { position: relative; min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 60px 0 40px; overflow: hidden; }
+  #fireflies { position: absolute; inset: 0; z-index: 0; }
+  .hero .frame { z-index: 2; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); display: flex; align-items: center; gap: 10px; margin-bottom: 22px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+  .hero h1 {
+    font-weight: 700; font-size: clamp(2.6rem, 6.4vw, 5rem); line-height: 1.02; letter-spacing: -1.5px; margin: 0 0 24px; max-width: 880px;
+  }
+  .hero h1 em, .closing h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
+  #contours { position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-soft); max-width: 560px; margin-bottom: 40px; }
+  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase;
+    padding: 14px 26px; border-radius: 3px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary { background: var(--accent); color: #061109; font-weight: 600; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 24px var(--accent-dim), 0 6px 20px rgba(0,0,0,0.4); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); background: rgba(255,255,255,0.02); }
+  .btn-ghost:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+
+  .status-strip {
+    display: flex; gap: 30px; flex-wrap: wrap; margin-top: 52px; padding-top: 24px; border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-soft);
+  }
+  .status-strip b { color: var(--text); }
+
+  /* ---------- SECTIONS ---------- */
+  .section { padding: 100px 0; position: relative; }
+  .section-tag {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  .section h2 {
+    font-weight: 600; font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 0 0 16px; letter-spacing: -0.5px; max-width: 640px;
+  }
+  .section-sub { color: var(--text-soft); font-size: 0.95rem; max-width: 560px; margin-bottom: 48px; }
+
+  /* ---------- ARTIFACT GRID ---------- */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .glass-card {
+    background: rgba(255,255,255,0.025); border: 1px solid var(--border); border-radius: 8px; padding: 26px 24px;
+    backdrop-filter: blur(6px); position: relative; overflow: hidden; transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  .glass-card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transition: opacity 0.25s ease;
+  }
+  .glass-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
+  .glass-card:hover::before { opacity: 0.7; }
+  .glass-card .catno { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--accent); letter-spacing: 1px; margin-bottom: 14px; }
+  .glass-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.12rem; margin: 0 0 10px; }
+  .glass-card p { font-size: 0.85rem; color: var(--text-soft); margin: 0 0 18px; line-height: 1.6; min-height: 72px; }
+  .glass-card a.view {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .glass-card a.view::after { content: "→"; transition: transform 0.2s ease; }
+  .glass-card a.view:hover::after { transform: translateX(4px); }
+
+  /* ---------- MODULE LOG (data table) ---------- */
+  .log-panel { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .log-head, .log-row {
+    display: grid; grid-template-columns: 50px 1fr 130px 70px; gap: 14px; align-items: center; padding: 11px 20px;
+  }
+  .log-head { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-soft); border-bottom: 1px solid var(--border); }
+  .log-row { border-bottom: 1px solid var(--border); font-size: 0.84rem; transition: background 0.15s ease; }
+  .log-row:last-child { border-bottom: none; }
+  .log-row:hover { background: rgba(77,255,180,0.03); }
+  .log-row .modno { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--accent); }
+  .log-row .modtitle a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--border-hover); }
+  .log-row .modtitle a:hover { color: var(--accent); }
+  .log-row.excluded { opacity: 0.45; font-style: italic; }
+  .badge {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.64rem; letter-spacing: 0.5px; padding: 3px 9px; border-radius: 20px;
+    display: inline-block; white-space: nowrap;
+  }
+  .badge.graded { background: rgba(77,255,180,0.12); color: var(--accent); }
+  .badge.pending { background: rgba(255,184,77,0.12); color: #ffb84d; }
+  .badge.excluded { background: rgba(255,255,255,0.05); color: var(--text-soft); }
+  .badge.now { background: rgba(77,255,180,0.22); color: var(--accent); }
+  .log-row .modhrs { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-soft); text-align: right; }
+
+  /* ---------- LEDGER (pulsing stats) ---------- */
+  .ledger { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .stat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 30px 26px; text-align: left; }
+  .stat-num {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.7rem; color: var(--accent); line-height: 1;
+    text-shadow: 0 0 16px rgba(77,255,180,0.3);
+  }
+  .stat-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-soft); margin-top: 10px; }
+
+  /* ---------- REFLECTION (cream break) ---------- */
+  .reflection-wrap { background: var(--cream); color: var(--cream-ink); position: relative; }
+  .reflection-wrap::before {
+    content: ""; position: absolute; inset: 0; opacity: 0.5; pointer-events: none;
+    background-image: repeating-radial-gradient(circle at 20% 30%, transparent 0, transparent 38px, rgba(23,35,28,0.035) 39px, transparent 40px),
+                       repeating-radial-gradient(circle at 80% 70%, transparent 0, transparent 54px, rgba(23,35,28,0.03) 55px, transparent 56px);
+  }
+  .reflection-wrap .section-tag { color: #3a6b52; }
+  .reflection-wrap h2 { color: var(--cream-ink); }
+  .journal-text { max-width: 680px; font-size: 1.02rem; line-height: 1.8; position: relative; z-index: 1; }
+  .journal-text p { margin: 0 0 20px; }
+  .journal-text .sign { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-style: italic; color: #3a6b52; margin-top: 24px; }
+
+  /* ---------- NEXT ---------- */
+  .next-list { list-style: none; padding: 0; margin: 0; max-width: 700px; }
+  .next-list li { padding: 16px 0; border-bottom: 1px solid var(--border); display: flex; gap: 16px; font-size: 0.95rem; }
+  .next-list li:last-child { border-bottom: none; }
+  .next-list li .arrow { color: var(--accent); font-family: 'IBM Plex Mono', monospace; flex-shrink: 0; }
+
+  /* ---------- CLOSING ---------- */
+  .closing { position: relative; padding: 120px 0; overflow: hidden; text-align: center; }
+  #fireflies-2 { position: absolute; inset: 0; z-index: 0; }
+  .closing .frame { position: relative; z-index: 2; }
+  .closing h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin: 0 0 20px; }
+  .closing p { color: var(--text-soft); max-width: 480px; margin: 0 auto 36px; }
+  .closing .cta-row { justify-content: center; }
+
+  footer { border-top: 1px solid var(--border); padding: 24px 0 50px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--text-soft); }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+    .ledger { grid-template-columns: 1fr; }
+    .log-head { display: none; }
+    .log-row { grid-template-columns: 40px 1fr; grid-template-areas: "no title" "badge hrs"; row-gap: 6px; }
+    .log-row .modno { grid-area: no; }
+    .log-row .modtitle { grid-area: title; }
+    .log-row .badge { grid-area: badge; justify-self: start; }
+    .log-row .modhrs { grid-area: hrs; text-align: left; }
+  }
+  .log-toggle {
+    margin-top: 14px; background: none; border: 1px solid var(--border); color: var(--accent);
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase;
+    padding: 10px 20px; border-radius: 3px; cursor: pointer; transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .log-toggle:hover { border-color: var(--border-hover); background: rgba(77,255,180,0.05); }
+  .log-row.hidden-row { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <canvas id="contours"></canvas>
+    <canvas id="fireflies"></canvas>
+    <div class="frame">
+      <div class="eyebrow"><span class="dot"></span> PreserveMy.World × TechRealm — Internship Record</div>
+      <h1 class="disp">Places we're trying to <em>keep</em>, documented one commit at a time.</h1>
+      <div class="hero-sub">Amna Hafeez — Platform &amp; Web Engineering, Team Indus. Building tools that keep disappearing heritage sites walkable, explorable, and harder to lose — and being honest about what's still in review.</div>
+      <div class="cta-row">
+        <a class="btn btn-primary magnetic" href="https://www.linkedin.com/in/amna-hafeez-se" target="_blank">Connect on LinkedIn</a>
+        <a class="btn btn-ghost magnetic" href="https://github.com/Anfey-SE" target="_blank">GitHub — Anfey-SE</a>
+      </div>
+      <div class="status-strip">
+        <span>TRACK <b>Platform &amp; Web Engineering</b></span>
+        <span>TEAM <b>Team Indus</b></span>
+        <span>GRADED <b>15 / 30</b></span>
+        <span>PENDING REVIEW <b>13 / 30</b></span>
+        <span>STATUS <b>Final Sprint — Module 30 in Progress</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="frame reveal">
+      <div class="section-tag">01 — Evidence</div>
+      <h2 class="disp">The Artifacts</h2>
+      <div class="section-sub">Live builds and repositories, each linking directly to the deployed proof — not a screenshot standing in for it.</div>
+      <div class="grid">
+        <div class="glass-card">
+          <div class="catno mono">KR-07 · MOD 10–29</div>
+          <h3>Katas Raj Heritage 3D</h3>
+          <p>MobileNetV2 classifier, AR measurement overlay, and an interactive Three.js depth-relief viewer with a live user-controlled intensity slider.</p>
+          <a class="view" href="https://katas-raj-heritage-3d.vercel.app" target="_blank">View artifact</a>
+        </div>
+        <div class="glass-card">
+          <div class="catno mono">MD-11 · MOD 11, 19, 22</div>
+          <h3>Great Bath, Mohenjo-daro</h3>
+          <p>COLMAP photogrammetry reconstruction, improved from 3 to 13 registered images via exhaustive matching — CPU-only, no CUDA available.</p>
+          <a class="view" href="https://github.com/Anfey-SE/mohenjodaro-greatbath-reconstruction" target="_blank">View repository</a>
+        </div>
+        <div class="glass-card">
+          <div class="catno mono">PH-13 · MOD 13, 26</div>
+          <h3>PMW Heritage Showcase</h3>
+          <p>A curated presentation across Rohtas Fort, Katas Raj, and Mohenjo-daro, embedded live. 100/100/100/100 on Lighthouse.</p>
+          <a class="view" href="https://pmw-heritage-showcase.vercel.app" target="_blank">View artifact</a>
+        </div>
+        <div class="glass-card">
+          <div class="catno mono">PF-28 · MOD 28</div>
+          <h3>Performance Fix, Diagnosed</h3>
+          <p>Traced a Lighthouse Performance score from 52 to 80 by reading the tool's own diagnostics — an oversized image, not a compression problem.</p>
+          <a class="view" href="https://github.com/Anfey-SE/katas-raj-heritage-3d/commit/05bbafdf82c42e8a012fd9dc395745b386eff4d4" target="_blank">View commit</a>
+        </div>
+        <div class="glass-card">
+          <div class="catno mono">ML-16</div>
+          <h3>MNIST Classifier</h3>
+          <p>Handwritten digit recognition network built from the ground up — 97.54% test accuracy, presented as a visualization deck.</p>
+          <a class="view" href="https://gamma.app/docs/Handwritten-Digit-Recognition-with-Neural-Networks-i1ygx99zkmxelle" target="_blank">View deck</a>
+        </div>
+        <div class="glass-card">
+          <div class="catno mono">CQ-04</div>
+          <h3>ClinicQ</h3>
+          <p>Flask + React campus clinic queue manager — 7 REST endpoints, live-updating dashboard, CSV-backed and tested end to end.</p>
+          <a class="view" href="https://github.com/Anfey-SE/clinic-app" target="_blank">View repository</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="frame reveal">
+      <div class="section-tag">02 — Full Record</div>
+      <h2 class="disp">Module Log</h2>
+      <div class="section-sub">Every module mapped honestly: 15 graded, 13 submitted and still in review, 1 ungraded icebreaker task explicitly marked rather than hidden.</div>
+      <div class="log-panel">
+        <div class="log-head">
+          <div>Mod</div><div>Task</div><div>Status</div><div style="text-align:right;">Hrs</div>
+        </div>
+        <div id="log-body"></div>
+      </div>
+      <button class="log-toggle" id="log-toggle-btn">Show all 30 modules</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="frame reveal">
+      <div class="section-tag">03 — Verified Totals</div>
+      <h2 class="disp">The Ledger</h2>
+      <div class="section-sub">Numbers as they stand right now, not projected ahead.</div>
+      <div class="ledger">
+        <div class="stat-card"><div class="stat-num mono">15/30</div><div class="stat-lbl">Modules Graded</div></div>
+        <div class="stat-card"><div class="stat-num mono">36h 30m</div><div class="stat-lbl">Certificate Attendance (of 50h Target)</div></div>
+        <div class="stat-card"><div class="stat-num mono">52→80</div><div class="stat-lbl">Lighthouse Score, Diagnosed &amp; Fixed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="reflection-wrap">
+    <section class="section">
+      <div class="frame reveal">
+        <div class="section-tag">04 — Personal Log</div>
+        <h2 class="disp">Field Journal</h2>
+        <div class="journal-text">
+          <p>The biggest shift for me this internship wasn't a framework — it was learning to trust evidence over assumption. My first Lighthouse audit on Katas Raj reported a Performance score of 37. I could have submitted that as fact. Instead, running it again in a clean incognito window showed the real number was 52 — Chrome extensions had quietly corrupted the first read.</p>
+          <p>Later, compressing my hero image only moved the score to 58 — disappointing, until I actually read Lighthouse's own diagnostic breakdown instead of assuming compression was the whole fix. The image was still ten times larger in pixel dimensions than its display size. Resizing it properly took Performance to 80. The tool told me exactly what was wrong, twice. I just had to slow down and read it.</p>
+          <p>The second lesson came from review, not instruments. Reading a peer's site showed me gaps in my own work I couldn't see by looking at it alone — no live interactivity, no visible sourcing, no location context. That produced the strongest single change I made all internship: a depth-intensity slider that recalculates my 3D mesh's geometry live, built because I saw someone else do something more interactive and asked why mine couldn't do the same.</p>
+          <div class="sign">— Amna</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="frame reveal">
+      <div class="section-tag">05 — Open Threads</div>
+      <h2 class="disp">What's Next</h2>
+      <ul class="next-list">
+        <li><span class="arrow">→</span> Replace the simulated AR overlay on Katas Raj with real computed distances, once COLMAP reconstruction quality improves.</li>
+        <li><span class="arrow">→</span> Extend the MobileNetV2 classifier's training set with more Pakistani heritage sites — moving past closest-ImageNet labels like "castle."</li>
+        <li><span class="arrow">→</span> Apply the same diagnostic-first performance workflow to the Heritage Showcase and Great Bath repository next.</li>
+        <li><span class="arrow">→</span> Continue building UNLONE, my own project for real-time meetups among Pakistani university students — same loop: ship, measure, diagnose, fix.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="closing">
+    <canvas id="contours-2"></canvas>
+    <canvas id="fireflies-2"></canvas>
+    <div class="frame">
+      <h2 class="disp">Not just saved. <em>Entered</em>.</h2>
+      <p>15 modules graded, 13 in review, one honest omission. Every link above is real and live.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary magnetic" href="https://www.linkedin.com/in/amna-hafeez-se" target="_blank">Connect on LinkedIn</a>
+        <a class="btn btn-ghost magnetic" href="https://github.com/Anfey-SE" target="_blank">GitHub — Anfey-SE</a>
+        <a class="btn btn-ghost magnetic" href="https://dev.to/amna_hafeez" target="_blank">Writing — DEV.to</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>PMW × TECHREALM — PLATFORM &amp; WEB ENGINEERING — TEAM INDUS — RECORD AS OF MODULE 30</footer>
+
+<script>
+  // Scroll reveals
+  const revealEls = document.querySelectorAll(".reveal");
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Firefly particle field — restrained, respects reduced motion
+  function initFireflies(canvasId, count) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let w, h, particles;
+
+    function resize() {
+      w = canvas.width = canvas.offsetWidth;
+      h = canvas.height = canvas.offsetHeight;
+    }
+    function makeParticles() {
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        r: Math.random() * 1.6 + 0.6,
+        vx: (Math.random() - 0.5) * 0.12, vy: (Math.random() - 0.5) * 0.12,
+        phase: Math.random() * Math.PI * 2,
+      }));
+    }
+    resize(); makeParticles();
+    window.addEventListener("resize", () => { resize(); makeParticles(); });
+
+    if (prefersReduced) {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.fillStyle = "rgba(77,255,180,0.35)";
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      return;
+    }
+
+    function tick(t) {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+        const flicker = 0.35 + 0.35 * Math.sin(t * 0.001 + p.phase);
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(77,255,180,${flicker})`;
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = "rgba(77,255,180,0.6)";
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  initFireflies("fireflies", 60);
+  initFireflies("fireflies-2", 40);
+
+  // Static topographic contour lines — ambient texture only, no motion,
+  // so fireflies stay the single signature motion moment per section.
+  function initContours(canvasId, lineCount) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    function draw() {
+      const w = canvas.width = canvas.offsetWidth;
+      const h = canvas.height = canvas.offsetHeight;
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < lineCount; i++) {
+        const baseY = (h / (lineCount + 1)) * (i + 1) + (Math.sin(i * 1.7) * 22);
+        ctx.beginPath();
+        ctx.moveTo(-20, baseY);
+        const segments = 6;
+        for (let s = 1; s <= segments; s++) {
+          const x = (w / segments) * s;
+          const wobble = Math.sin(s * 1.3 + i * 0.9) * 30 * ((i % 3) + 1) / 3;
+          ctx.quadraticCurveTo(x - (w / segments) / 2, baseY + wobble, x, baseY + wobble * 0.6);
+        }
+        ctx.strokeStyle = `rgba(77,255,180,${0.05 + (i % 3) * 0.02})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+    draw();
+    window.addEventListener("resize", draw);
+  }
+  initContours("contours", 14);
+  initContours("contours-2", 10);
+
+  // Magnetic button hover
+  document.querySelectorAll(".magnetic").forEach(btn => {
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.28}px) scale(1.04)`;
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translate(0, 0) scale(1)";
+    });
+  });
+
+  // Module log — honest status per module
+  const modules = [
+    { n: 1, title: "Kickoff, Accounts & Team Branding", status: "graded", grade: "B · 72.5%", link: "https://archiveai-pmw.carrd.co", hrs: "" },
+    { n: 2, title: "Python Setup, Git & First PR", status: "graded", grade: "A- · 80.2%", link: "https://github.com/Anfey-SE/PMW-day1", hrs: "" },
+    { n: 3, title: "(Ice-breaker task — ungraded, intentionally excluded)", status: "excluded", grade: "Not submitted", link: null, hrs: "" },
+    { n: 4, title: "Custom Assignment — ClinicQ & Portfolio", status: "graded", grade: "A+ · 96.0%", link: "https://github.com/Anfey-SE/clinic-app", hrs: "" },
+    { n: 5, title: "youthxAI: Python + Colab", status: "graded", grade: "C+ · 66.1%", link: "https://www.kaggle.com/learn/certification/amnahafeezse/python", hrs: "" },
+    { n: 6, title: "Sunday AI Review & Prompt Engineering", status: "graded", grade: "B+ · 77.0%", link: "https://github.com/Anfey-SE/PMW-day1/pull/1", hrs: "" },
+    { n: 7, title: "Source, Curate & Write About Footage", status: "graded", grade: "C+ · 63.5%", link: "https://docs.google.com/document/d/17HmdHio1IP-LettgsvL65_0lehx45y4mwb1qIYQc_QU/edit", hrs: "" },
+    { n: 8, title: "youthxAI: Linear Regression", status: "graded", grade: "B · 73.4%", link: "https://colab.research.google.com/drive/1xenvjBekPyxPCsvDUedAl7VRyvIDZOT9", hrs: "" },
+    { n: 9, title: "Research Methods, Sourcing & Writing", status: "graded", grade: "B · 73.4%", link: "https://dev.to/amna_hafeez/rohtas-fort-the-fortress-that-was-never-stormed-k05", hrs: "" },
+    { n: 10, title: "ML Visualizations, AR Lines & Capture-to-3D", status: "graded", grade: "B · 73.4%", link: "https://katas-raj-heritage-3d.vercel.app", hrs: "" },
+    { n: 11, title: "Present the Build & Convert to 3D", status: "graded", grade: "C+ · 66.1%", link: "https://github.com/Anfey-SE/mohenjodaro-greatbath-reconstruction", hrs: "" },
+    { n: 12, title: "youthxAI: Logistic Regression (Titanic)", status: "graded", grade: "B+ · 77.0%", link: "https://colab.research.google.com/drive/1zkdRhRHFFq3IH3WiwB1jclB00WSwXd1-", hrs: "" },
+    { n: 13, title: "Curate Footage & Build Presentation", status: "graded", grade: "A+ · 96.0%", link: "https://pmw-heritage-showcase.vercel.app", hrs: "" },
+    { n: 14, title: "Story, Script, Film & Edit", status: "graded", grade: "A+ · 96.0%", link: "https://drive.google.com/file/d/1D0i_OouNjFyFgphfgmsl4FIrAhOEkV9C/view", hrs: "" },
+    { n: 15, title: "Individual Storytelling: What Home Means to You", status: "graded", grade: "B · 68.9%", link: "https://drive.google.com/file/d/12dtpvUYP4YGjum38fXQkujLuJSpLn3v1/view", hrs: "" },
+    { n: 16, title: "youthxAI: Neural Networks (MNIST)", status: "graded", grade: "A+ · 95%", link: "https://gamma.app/docs/Handwritten-Digit-Recognition-with-Neural-Networks-i1ygx99zkmxelle", hrs: "" },
+    { n: 17, title: "Video + Voice Capture & QA Follow-up", status: "pending", grade: "Submitted", link: "https://drive.google.com/file/d/16USIGbFpWNuCChVXn8ZNOBZ56fOKMYtb/view", hrs: "" },
+    { n: 18, title: "Conference & Awards — Final Presentation", status: "pending", grade: "Submitted", link: "https://docs.google.com/presentation/d/11FDjiMpMOSbdfU1cfboyoJgRhX0T58zx/edit", hrs: "" },
+    { n: 19, title: "Ext. Sprint 1: Verified Work Plan", status: "pending", grade: "Submitted", link: "https://github.com/Anfey-SE/mohenjodaro-greatbath-reconstruction/issues/1", hrs: "4h" },
+    { n: 20, title: "Ext. Sprint 2: Research & Source Log", status: "pending", grade: "Submitted", link: "https://dev.to/amna_hafeez/choosing-a-3d-reconstruction-method-for-heritage-sites-with-no-lidar-access-3e9h", hrs: "4h" },
+    { n: 21, title: "Ext. Sprint 3: Build Evidence (SEO/A11y 83→100, 92→100)", status: "pending", grade: "Submitted", link: "https://katas-raj-heritage-3d.vercel.app", hrs: "4h" },
+    { n: 22, title: "Ext. Sprint 4: Review & Revision", status: "pending", grade: "Submitted", link: "https://github.com/Anfey-SE/mohenjodaro-greatbath-reconstruction", hrs: "4h" },
+    { n: 23, title: "Ext. Sprint 5: Final Artifact Improvement", status: "pending", grade: "Submitted", link: "https://katas-raj-heritage-3d.vercel.app", hrs: "4h" },
+    { n: 24, title: "Iris Hacks IV Hackathon — Registration", status: "pending", grade: "Submitted", link: "https://drive.google.com/file/d/1TFthNPHDehqfUcFqb3xdpZQB4Ps-CERy/view", hrs: "2h" },
+    { n: 25, title: "Ext. Sprint 6: Public Write-up", status: "pending", grade: "Submitted", link: "https://dev.to/amna_hafeez/real-fixes-on-my-heritage-3d-site-an-audit-trail-and-a-rendering-polish-pass-h76", hrs: "4h" },
+    { n: 26, title: "Ext. Sprint 7: Certificate Evidence Pack (A11y/SEO 88→100, 91→100)", status: "pending", grade: "Submitted", link: "https://pmw-heritage-showcase.vercel.app", hrs: "4h" },
+    { n: 27, title: "Final Sprint 1: Project Case Study", status: "pending", grade: "Submitted", link: "https://dev.to/amna_hafeez/katas-raj-heritage-3d-building-an-ai-powered-digital-preservation-tool-3ae9", hrs: "2.5h" },
+    { n: 28, title: "Final Sprint 2: Build/Research Proof (52→80 Performance)", status: "pending", grade: "Submitted", link: "https://github.com/Anfey-SE/katas-raj-heritage-3d/commit/05bbafdf82c42e8a012fd9dc395745b386eff4d4", hrs: "2.5h" },
+    { n: 29, title: "Final Sprint 3: Peer Review & Revision", status: "pending", grade: "Submitted", link: "https://github.com/Anfey-SE/katas-raj-heritage-3d/commits/main/", hrs: "2.5h" },
+    { n: 30, title: "Final Sprint 4: Portfolio & Certificate Evidence", status: "now", grade: "In progress — this page", link: null, hrs: "2.5h" },
+  ];
+
+  const badgeMap = {
+    graded: '<span class="badge graded">Graded</span>',
+    pending: '<span class="badge pending">Pending Review</span>',
+    excluded: '<span class="badge excluded">Excluded</span>',
+    now: '<span class="badge now">In Progress</span>',
+  };
+
+  const logBody = document.getElementById("log-body");
+  modules.forEach(m => {
+    const row = document.createElement("div");
+    row.className = "log-row" + (m.status === "excluded" ? " excluded" : "");
+    const titleHtml = m.link ? `<a href="${m.link}" target="_blank">${m.title}</a>` : m.title;
+    row.innerHTML = `
+      <div class="modno mono">M${String(m.n).padStart(2, "0")}</div>
+      <div class="modtitle">${titleHtml}</div>
+      <div class="badge-cell">${badgeMap[m.status]}</div>
+      <div class="modhrs">${m.hrs}</div>
+    `;
+    logBody.appendChild(row);
+  });
+</script>
+</body>
+</html>
